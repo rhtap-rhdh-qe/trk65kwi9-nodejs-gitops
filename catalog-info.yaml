@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: trk65kwi9-nodejs-gitops
+  description: This is GitOps manifest for trk65kwi9-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: trk65kwi9-nodejs
+    janus-idp.io/tekton: trk65kwi9-nodejs 
+    backstage.io/kubernetes-id: trk65kwi9-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:trk65kwi9-nodejs
